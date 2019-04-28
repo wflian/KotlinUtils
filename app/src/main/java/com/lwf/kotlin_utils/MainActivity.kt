@@ -2,11 +2,10 @@ package com.lwf.kotlin_utils
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.lwf.utils.DisplayUtils.getScreenHeightDp
-import com.lwf.utils.DisplayUtils.getScreenHeightPx
-import com.lwf.utils.DisplayUtils.getScreenWidthDp
-import com.lwf.utils.DisplayUtils.getScreenWidthPx
+import com.lwf.utils.getDiskCachePath
+import com.lwf.utils.getRootPath
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,11 +16,10 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        text1.text = getScreenWidthPx().toString()
-        text2.text = getScreenHeightPx().toString()
-        text3.text = getScreenWidthDp().toString()
-        text4.text = getScreenHeightDp().toString()
-
+        text1.text = getDiskCachePath()
+        text2.text = getRootPath().absolutePath
 
     }
 }
+
+
